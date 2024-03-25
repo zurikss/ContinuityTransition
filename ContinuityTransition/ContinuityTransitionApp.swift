@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ContinuityTransitionApp: App {
+    
+    @StateObject var viewModel = HomeViewModel()
+    @Namespace var namespace
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(namespace: namespace, expand: ExpandSection(title: "Send", description: "Send tokens or collectibles to any address or ENS username.", imageName: "paperplane.fill", backgroundColor: .blue))
+                .environmentObject(viewModel)
         }
     }
 }
