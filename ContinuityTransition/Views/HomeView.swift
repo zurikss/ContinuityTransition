@@ -22,7 +22,6 @@ struct HomeView: View {
         
         ExpandSection(title: "Stay", description: "Find the perfect accommodation for a comfortable stay.", imageName: "house.fill", backgroundColor: .teal),
     ]
-
     
     let expand: ExpandSection
     
@@ -135,7 +134,7 @@ extension HomeView {
                             VStack(alignment: .leading, spacing: 8, content: {
                                 ForEach(section.indices, id: \.self) { index in
                                     Button {
-                                        withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
+                                        withAnimation(.spring(response: 0.25, dampingFraction: 0.85)) {
                                             viewModel.selectedExpandIndex = index
                                             viewModel.moveItems = true
                                         }
@@ -149,7 +148,8 @@ extension HomeView {
                         }
                     }
                 }
-                .offset(y: viewModel.moveItems ? -150 : 0)
+                .offset(y: viewModel.moveItems ? -200 : 0)
+                .opacity(viewModel.moveItems ? 0 : 1)
             }
         }
         .padding(viewModel.showItems ? 8 : 0)

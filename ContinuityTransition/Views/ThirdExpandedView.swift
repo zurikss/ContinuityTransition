@@ -32,12 +32,12 @@ struct ThirdExpandedView: View {
                         
                         Spacer()
                         Button(action: {
-                            withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
+                            withAnimation(.spring(response: 0.25, dampingFraction: 0.85)) {
                                 viewModel.showItems = true
                                 HapticManager.instance.impact(style: .light)
                                 viewModel.selectedExpandIndex = nil
                             }
-                            withAnimation(.spring(response: 0.32, dampingFraction: 0.9)) {
+                            withAnimation(.spring(response: 0.28, dampingFraction: 0.9)) {
                                 viewModel.moveItems = false
                             }
                         }, label: {
