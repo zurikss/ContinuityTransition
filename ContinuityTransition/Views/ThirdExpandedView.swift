@@ -109,9 +109,7 @@ struct ThirdExpandedView: View {
                 .matchedGeometryEffect(id: "mask", in: namespace)
             
         })
-        .transition(.scale(scale: 1))
         .ignoresSafeArea(.all)
-        
         .onAppear(perform: {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.85, blendDuration: 1)) {
                 appear = true

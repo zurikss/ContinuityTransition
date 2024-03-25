@@ -91,7 +91,6 @@ struct FirstExpandedView: View {
                 .matchedGeometryEffect(id: "mask", in: namespace)
             
         })
-        .transition(.scale(scale: 1))
         .ignoresSafeArea(.all)
         
         .onAppear(perform: {
