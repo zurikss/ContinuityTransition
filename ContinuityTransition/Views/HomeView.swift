@@ -201,6 +201,7 @@ extension HomeView {
                 .padding(.top, 24)
             }
             .scrollIndicators(.hidden)
+            .scaleEffect(viewModel.moveItems ? 0.8 : 1, anchor: .bottom)
         })
         .padding(.horizontal, 20)
         .background(.gray0)
