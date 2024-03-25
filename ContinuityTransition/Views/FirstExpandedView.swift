@@ -12,7 +12,7 @@ struct FirstExpandedView: View {
     var namespace: Namespace.ID
     @State private var textField: String = ""
     @State private var appear: Bool = false
-    @EnvironmentObject var viewModel: HomeViewModel
+    @EnvironmentObject var viewModel: HomeViewModel     
     
     var body: some View {
         ZStack {
