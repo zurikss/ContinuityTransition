@@ -32,7 +32,7 @@ struct SecondExpandedView: View {
                     Button(action: {
                         withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
                             viewModel.showItems = true
-                            HapticManager.instance.impact(style: .soft)
+                            HapticManager.instance.impact(style: .light)
                             viewModel.selectedExpandIndex = nil
                         }
                         withAnimation(.spring(response: 0.32, dampingFraction: 0.9)) {

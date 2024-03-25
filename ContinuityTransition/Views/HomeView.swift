@@ -49,7 +49,7 @@ struct HomeView: View {
                      ZStack(content: {
                          combinedViews
                              .padding(20)
-                             .offset(y: viewModel.showItems ? 0 : -80)
+                             //.offset(y: viewModel.showItems ? 0 : -80)
                      })
                      .transition(.scale(scale: 1))
                  }
@@ -107,7 +107,7 @@ struct ExpandView: View {
 extension HomeView {
     var plusButton: some View {
         Button {
-            HapticManager.instance.impact(style: .soft)
+            HapticManager.instance.impact(style: .light)
             
             withAnimation(.spring(response: 0.3, dampingFraction: 0.85, blendDuration: 1)) {
                 viewModel.showItems = true
@@ -202,18 +202,6 @@ extension HomeView {
                 .padding(.top, 24)
             }
             .scrollIndicators(.hidden)
-            
-            HStack(content: {
-                ForEach(0..<5) { index in
-                    Rectangle()
-                        .foregroundStyle(.gray100)
-                        .frame(width: 50, height: 50)
-                        .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
-                    Spacer()
-                }
-            })
-            .padding(.vertical, 16)
-            .background(.gray0)
         })
         .padding(.horizontal, 20)
         .background(.gray0)
