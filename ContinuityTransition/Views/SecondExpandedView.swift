@@ -86,12 +86,6 @@ struct SecondExpandedView: View {
                 appear = true
             }
         })
-        
-        
-        
-        
-        
-        
     }
 }
 
