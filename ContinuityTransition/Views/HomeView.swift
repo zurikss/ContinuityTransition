@@ -109,7 +109,7 @@ extension HomeView {
         Button {
             HapticManager.instance.impact(style: .light)
             
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.85, blendDuration: 1)) {
+            withAnimation(.spring(response: 0.25, dampingFraction: 0.85, blendDuration: 1)) {
                 viewModel.showItems = true
             }
             
@@ -149,8 +149,7 @@ extension HomeView {
                         }
                     }
                 }
-                .transition(.asymmetric(insertion: .scale(scale: 0.5, anchor: .bottomTrailing).combined(with: .opacity).animation(.spring(response: 0, dampingFraction: 0.85)), removal: .scale(scale: 0.5, anchor: .bottomTrailing).combined(with: .opacity).animation(.spring(response: 0, dampingFraction: 0.85))))
-                    .offset(y: viewModel.moveItems ? -150 : 0)
+                .offset(y: viewModel.moveItems ? -150 : 0)
             }
         }
         .padding(viewModel.showItems ? 8 : 0)

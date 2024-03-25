@@ -48,6 +48,7 @@ struct SecondExpandedView: View {
                             .cornerRadius(32)
                 })
                 }
+                
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(0..<12) { index in
