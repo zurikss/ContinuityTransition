@@ -1,3 +1,3 @@
-Recreating a familiar continuity transition from the Family mobile app in Swift UI. This transition smoothly carries over elements from one screen to another, creating a sense of flow and connection between different views of the app.
+Recreating a familiar continuity transition from the Family mobile app in Swift UI. This transition smoothly carries over elements from one screen to another, creating a sense of flow and connection between different views in the app.
 
-![image](https://github.com/zurikss/ContinuityTransition/assets/47340237/d9611c59-469a-4761-a9ad-c5877e2bb362)
+![screen](https://github.com/zurikss/ContinuityTransition/assets/47340237/32a3c5f9-13da-4c46-bf46-b44ca3aec28d)
